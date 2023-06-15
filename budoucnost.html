@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="cz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+  <title>Baterie</title>
+  <style>
+    /* Vlastní styly zde */
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+    }
+    body {
+      background-color: #f2f2f2;
+    }
+    .navbar-nav .nav-link:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Upravení designu pro header */
+    .jumbotron {
+      background-image: url("img/background.webp");
+      background-size: cover;
+      color: white;
+      padding: 100px;
+      text-align: center;
+    }
+
+    /* Upravení designu pro sekce */
+    .section {
+      padding: 80px 0;
+      background-color: #f8f9fa; /* Světle šedé pozadí */
+    }
+
+    /* Upravení designu pro text s čarou */
+    .section-heading {
+      font-weight: bold;
+      text-align: center;
+      border-bottom: 1px solid #ccc; /* Čára pod textem */
+      padding-bottom: 20px;
+      margin-bottom: 40px;
+    }
+
+    /* Upravení designu pro obrázky */
+    .img-fluid {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Upravení designu pro střídání obrázků a textu */
+    .row-reverse .col-lg-6:nth-child(even) {
+      order: -1;
+    }
+
+    /* Upravení designu pro obsahové bloky */
+    .content-block {
+      margin-bottom: 40px;
+      text-align: justify;
+    }
+    body {
+      background-color: #f2f2f2;
+    }
+    /* Upravení designu pro text v obsahových blocích */
+    .content-block p {
+      margin-bottom: 20px;
+    }
+    .img-fluid {
+      width: 100%;
+      height: auto;
+      max-width: 400px; /* Zmenšení obrázků */
+      border-radius: 10px; /* Efekt zaoblených rohů */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Efekt stínování */
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: justify;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigační menu -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="img/logo.png" alt="Logo" width="50" height="50">
+        Baterie
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Úvod</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="historie.html">Historie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="budoucnost.html">Budoucnost</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kviz.html">Kviz</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kontakty.html">Kontakty</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Úvodní sekce -->
+  <header class="jumbotron">
+    <div class="container">
+      <h1 class="display-4">Baterie</h1>
+      <p class="lead">Zjistěte všechno o bateriích a co jste o nich ještě nevěděli.</p>
+    </div>
+  </header>
+
+  <!-- Budoucnost -->
+  <section id="future" class="section">
+    <div class="container">
+      <h2 class="section-heading">Budoucnost baterií</h2>
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="img/future1.jpg" alt="Budoucnost baterií 1" class="img-fluid rounded">
+          <div class="content-block">
+            <h3>Inovativní materiály</h3>
+            <p>Výzkum v oblasti baterií se zaměřuje na vývoj inovativních materiálů, které by mohly zvýšit jejich výkon a energetickou hustotu. Například grafen, nanostrukturované materiály a lithiové síranové baterie představují potenciální budoucnost v oblasti bateriových technologií.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="img/future2.webp" alt="Budoucnost baterií 2" class="img-fluid rounded">
+          <div class="content-block">
+            <h3>Dlouhá životnost</h3>
+            <p>Jedním z hlavních cílů výzkumu baterií je zvýšení jejich životnosti. Vědci se snaží vyvinout baterie, které by mohly vydržet mnohem delší dobu bez ztráty výkonu a kapacity. To by umožnilo snížit náklady na jejich nahrazování a přispělo by k udržitelnějšímu využívání energie.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row row-reverse">
+        <div class="col-lg-6">
+          <img src="img/future3.jpg" alt="Budoucnost baterií 3" class="img-fluid rounded">
+          <div class="content-block">
+            <h3>Ekologická udržitelnost</h3>
+            <p>Ekologická udržitelnost je klíčovým faktorem v budoucím vývoji baterií. Výzkum směřuje k nalezení alternativních materiálů a metod výroby, které by minimalizovaly negativní dopad na životní prostředí. Kromě toho se zkoumají možnosti recyklace a druhotného využití vyřazených baterií.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="img/future4.jpg" alt="Budoucnost baterií 4" class="img-fluid rounded">
+          <div class="content-block">
+            <h3>Dražení baterií</h3>
+            <p>S rozvojem technologií a rostoucím využíváním baterií se očekává, že budou dražší. Výzkum však směřuje k nalezení způsobů, jak snížit náklady na výrobu baterií a zvýšit jejich dostupnost. To by umožnilo širší využití baterií v různých odvětvích a přispělo by k rozvoji energetické nezávislosti.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Patička -->
+  <footer class="section">
+    <div class="container text-center">
+      <p>&copy; 2023 Ondřej Jasník</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+  <title>Baterie</title>
+  <style>
+    /* Vlastní styly zde */
+
+    /* Upravení designu pro navigační menu */
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+    }
+    body {
+      background-color: #f2f2f2;
+    }
+    .navbar-nav .nav-link:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Upravení designu pro header */
+    .jumbotron {
+      background-image: url("img/background.webp");
+      background-size: cover;
+      color: white;
+      padding: 100px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Upravení designu pro sekce */
+    .section {
+      padding: 80px 0;
+      background-color: #f8f9fa; /* Světle šedé pozadí */
+    }
+
+    /* Upravení designu pro text s čarou */
+    .section-heading {
+      font-weight: bold;
+      text-align: center;
+      border-bottom: 1px solid #ccc; /* Čára pod textem */
+      padding-bottom: 20px;
+      margin-bottom: 40px;
+    }
+
+    /* Upravení designu pro obrázky */
+    .img-fluid {
+      width: 100%;
+      height: auto;
+      max-width: 400px; /* Zmenšení obrázků */
+      border-radius: 10px; /* Efekt zaoblených rohů */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Efekt stínování */
+    }
+
+    /* Upravení designu pro střídání obrázků a textu */
+    .row-reverse .col-lg-6:nth-child(even) {
+      order: -1;
+    }
+
+    /* Upravení designu pro odstavce */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigační menu -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="img/logo.png" alt="Logo" width="50" height="50">
+        Baterie
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Úvod</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="historie.html">Historie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="budoucnost.html">Budoucnost</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kviz.html">Kviz</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kontakty.html">Kontakty</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Úvodní sekce -->
+  <header class="jumbotron">
+    <div class="container">
+      <h1 class="display-4">Baterie</h1>
+      <p class="lead">Zjistěte všechno o bateriích a co jste o nich ještě nevěděli.</p>
+    </div>
+  </header>
+
+  <!-- Historie -->
+  <section id="history" class="section">
+    <div class="container">
+      <h2 class="section-heading">Historie baterií</h2>
+      <p>Baterie mají dlouhou historii, která sahá až do starověku. Zde je pár zajímavostí:</p>
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="img/history1.jpg" alt="Historie baterií 1" class="img-fluid">
+        </div>
+        <div class="col-lg-6">
+          <p>Baterie byly poprvé použity ve starověkém Egyptě, kde byly objeveny hliněné nádoby obsahující elektrolytickou tekutinu a kovové tyče. Tyto nádoby mohly sloužit jako rudimentární galvanické články.</p>
+        </div>
+      </div>
+      <div class="row row-reverse">
+        <div class="col-lg-6">
+          <img src="img/history2.png" alt="Historie baterií 2" class="img-fluid">
+        </div>
+        <div class="col-lg-6">
+          <p>V 18. století italský vědec Alessandro Volta vyvinul první skutečnou baterii, nazvanou voltaický článek. Tento objev položil základy moderní elektrochemie a otevřel cestu pro další vývoj baterií.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="img/history3.webp" alt="Historie baterií 3" class="img-fluid">
+        </div>
+        <div class="col-lg-6">
+          <p>V průběhu 19. a 20. století byly vyvinuty různé typy baterií, včetně olověných akumulátorů, niklo-kadmiových baterií a lithium-iontových baterií. Tyto pokrokové technologie umožnily vznik moderních přenosných zařízení a elektromobilitu.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="img/history4.jpg" alt="Historie baterií 4" class="img-fluid" style="max-width: 300px;">
+        </div>
+        <div class="col-lg-6">
+          <p>V poslední době se výzkum zaměřuje na vývoj nových typů baterií, které by měly vyšší kapacitu, rychlejší nabíjení a nižší náklady na výrobu. Jedním z příkladů jsou lithium-sírové baterie a pevnolátkové baterie.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<footer class="section">
+  <div class="container text-center">
+    <p>&copy; 2023 Ondřej Jasník</p>
+  </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<!-- Patička -->

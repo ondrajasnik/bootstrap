@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+  <title>Kvíz o bateriích</title>
+  <style>
+    /* Vlastní styly zde */
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+    }
+    body {
+      background-color: #f2f2f2;
+    }
+    .navbar-nav .nav-link:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Upravení designu pro header */
+    .jumbotron {
+      background-image: url("img/background.webp");
+      background-size: cover;
+      color: white;
+      padding: 100px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Upravení designu pro sekce */
+    .section {
+      padding: 80px 0;
+      background-color: #f8f9fa; /* Světle šedé pozadí */
+    }
+
+    /* Upravení designu pro text s čarou */
+    .section-heading {
+      font-weight: bold;
+      text-align: center;
+      border-bottom: 1px solid #ccc; /* Čára pod textem */
+      padding-bottom: 20px;
+      margin-bottom: 40px;
+    }
+
+    /* Upravení designu pro obrázky */
+    .img-fluid {
+      width: 100%;
+      height: auto;
+      max-width: 400px; /* Zmenšení obrázků */
+      border-radius: 10px; /* Efekt zaoblených rohů */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Efekt stínování */
+    }
+
+    /* Upravení designu pro střídání obrázků a textu */
+    .row-reverse .col-lg-6:nth-child(even) {
+      order: -1;
+    }
+
+    /* Upravení designu pro odstavce */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: justify;
+    }
+    
+    body {
+      background-color: #f2f2f2;
+    }
+    /* Upravení designu pro text v obsahových blocích */
+    .content-block p {
+      margin-bottom: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    .options {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .option {
+      margin-bottom: 10px;
+    }
+
+    .option label {
+      display: inline-block;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    .submit-button {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #quiz-results {
+      display: none;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    #quiz-score {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .correct {
+      color: green;
+    }
+
+    .incorrect {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="img/logo.png" alt="Logo" width="50" height="50">
+        Baterie
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Úvod</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="historie.html">Historie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="budoucnost.html">Budoucnost</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kviz.html">Kviz</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kontakty.html">Kontakty</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Úvodní sekce -->
+  <header class="jumbotron">
+    <div class="container">
+      <h1 class="display-4">Baterie</h1>
+      <p class="lead">Zjistěte všechno o bateriích a co jste o nich ještě nevěděli.</p>
+    </div>
+  </header>
+  <div class="container">
+    <h1>Kvíz o bateriích</h1>
+
+    <form id="quiz-form">
+      <div class="question">
+        <p>1. Jaká je hlavní funkce baterie?</p>
+      </div>
+      <ul class="options">
+        <li class="option">
+          <input type="radio" name="q1" id="q1-a" value="a">
+          <label for="q1-a">A) Ukládání energie</label>
+        </li>
+        <li class="option">
+          <input type="radio" name="q1" id="q1-b" value="b">
+          <label for="q1-b">B) Generování elektřiny</label>
+        </li>
+        <li class="option">
+          <input type="radio" name="q1" id="q1-c" value="c">
+          <label for="q1-c">C) Zajištění bezpečného napájení</label>
+        </li>
+      </ul>
+
+      <div class="question">
+        <p>2. Jaký typ baterie se nejčastěji používá v mobilních telefonech?</p>
+      </div>
+      <ul class="options">
+        <li class="option">
+          <input type="radio" name="q2" id="q2-a" value="a">
+          <label for="q2-a">A) Olověná baterie</label>
+        </li>
+        <li class="option">
+          <input type="radio" name="q2" id="q2-b" value="b">
+          <label for="q2-b">B) Lithium-iontová baterie</label>
+        </li>
+        <li class="option">
+          <input type="radio" name="q2" id="q2-c" value="c">
+          <label for="q2-c">C) Niklo-kadmiová baterie</label>
+        </li>
+      </ul>
+
+      <div class="question">
+        <p>3. Jaká je průměrná životnost baterie v elektromobilu?</p>
+      </div>
+      <ul class="options">
+        <li class="option">
+          <input type="radio" name="q3" id="q3-a" value="a">
+          <label for="q3-a">A) 2-3 roky</label>
+        </li>
+        <li class="option">
+          <input type="radio" name="q3" id="q3-b" value="b">
+          <label for="q3-b">B) 5-7 let</label>
+        </li>
+        <li class="option">
+          <input type="radio" name="q3" id="q3-c" value="c">
+          <label for="q3-c">C) 10-15 let</label>
+        </li>
+      </ul>
+
+      <div class="question">
+        <p>4. Co je to paměťový efekt u baterií?</p>
+      </div>
+      <ul class="options">
+        <li class="option">
+          <input type="radio" name="q4" id="q4-a" value="a">
+          <label for="q4-a">A) Ztráta kapacity baterie při opakovaném krátkodobém nabíjení</label>
+        </li>
+        <li class="option">
+          <input type="radio" name="q4" id="q4-b" value="b">
+          <label for="q4-b">B) Zvýšení kapacity baterie při dlouhodobém nabíjení</label>
+        </li>
+        <li class="option">
+          <input type="radio" name="q4" id="q4-c" value="c">
+          <label for="q4-c">C) Snížení výkonu baterie při velké zátěži</label>
+        </li>
+      </ul>
+
+      <div class="submit-button">
+        <button type="submit" class="btn btn-primary">Odeslat</button>
+      </div>
+    </form>
+
+    <div id="quiz-results">
+      <h2 id="quiz-score"></h2>
+      <ul id="quiz-feedback" class="list-group"></ul>
+    </div>
+  </div>
+
+  <script>
+    // Získání formuláře kvízu
+    const quizForm = document.getElementById('quiz-form');
+
+    // Přidání posluchače události na odeslání formuláře
+    quizForm.addEventListener('submit', function(e) {
+      e.preventDefault(); // Zabránění automatického odeslání formuláře
+
+      // Získání vybraných odpovědí
+      const selectedAnswers = {
+        q1: document.querySelector('input[name="q1"]:checked'),
+        q2: document.querySelector('input[name="q2"]:checked'),
+        q3: document.querySelector('input[name="q3"]:checked'),
+        q4: document.querySelector('input[name="q4"]:checked')
+      };
+
+      let score = 0; // Skóre kvízu
+      const feedbackList = document.getElementById('quiz-feedback'); // Seznam zpětné vazby
+
+      // Kontrola odpovědí
+      for (const question in selectedAnswers) {
+        if (selectedAnswers[question]) {
+          const answer = selectedAnswers[question].value;
+
+          if (answer === 'b') {
+            // Správná odpověď
+            score++;
+            selectedAnswers[question].parentNode.classList.add('correct');
+            feedbackList.innerHTML += `<li class="list-group-item text-success">Odpověď na otázku ${question.slice(1)} je správná.</li>`;
+          } else {
+            // Nesprávná odpověď
+            selectedAnswers[question].parentNode.classList.add('incorrect');
+            feedbackList.innerHTML += `<li class="list-group-item text-danger">Odpověď na otázku ${question.slice(1)} je nesprávná.</li>`;
+          }
+        }
+      }
+
+      // Výpočet procentuálního skóre
+      const percentageScore = (score / 4) * 100;
+      const quizScore = document.getElementById('quiz-score');
+      quizScore.textContent = `Vaše skóre: ${percentageScore}%`;
+      
+      // Zobrazení výsledků kvízu
+      const quizResults = document.getElementById('quiz-results');
+      quizResults.style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>
